@@ -1,1 +1,1 @@
-My personal website created using Vue.js, Nuxt, and VueTyper!
+My personal website created using Vue.js and Nuxt!
