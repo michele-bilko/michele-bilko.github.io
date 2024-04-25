@@ -1,1 +1,1 @@
-Michele Bilko's resume/website
+My personal website created using Vue.js, Nuxt, and VueTyper!
