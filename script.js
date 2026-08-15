@@ -115,9 +115,9 @@ const commands = {
     <p>My name is Michele Bilko, I'm a grad student at Tufts University focusing on algorithmic analysis.</p>
     <p>Working at the intersection of theory and practice, I'm interested in developing efficient algorithms and applying them to real world problems.</p>
     <p></p>
-    <p>I just finished my B.A. in Computer Science (with a minor in Philosophy) at Boston University, and</p>
+    <p>I just finished my B.A. in Computer Science (with a minor in Philosophy) at Boston University, and starting my masters at Tufts this fall!</p>
     <p>I'm still discovering my interests and passions in Computer Science, but if you look through my website</p>
-    <p>you can see some of my research in: <span class="info">graph algorithms &amp; conductance</span>, <span class="info">computer vision deep learning</span>,</p>
+    <p>you can see some of my research in: <span class="info">graph algorithms &amp; conductance</span>, <span class="info">computer vision, deep learning</span>,</p>
     <p>and <span class="info">freelance web development</span>. I'm currently doing research on graph conductance and on</p>
     <p>deep-learning image restoration for satellite imagery.</p>
     <p></p>
