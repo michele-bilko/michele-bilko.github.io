@@ -355,7 +355,7 @@ const commands = {
         execute: () => `
 <div class="output">
     <p class="section-title">Contact</p>
-    <p>~ <span class="success">Email:</span> <a href="mailto:mbilko@bu.edu">mbilko@bu.edu</a> · <a href="mailto:michelebilko@gmail.com">michelebilko@gmail.com</a></p>
+    <p>~ <span class="success">Email:</span> <a href="mailto:mbilko@bu.edu">michele.bilko@tufts.edu</a> - <a href="mailto:michelebilko@gmail.com">michelebilko@gmail.com</a></p>
     <p>~ <span class="success">LinkedIn:</span> <a href="https://linkedin.com/in/michele-bilko" target="_blank" rel="noopener">linkedin.com/in/michele-bilko</a></p>
     <p>~ <span class="success">GitHub:</span> <a href="https://github.com/michele-bilko" target="_blank" rel="noopener">github.com/michele-bilko</a></p>
 </div>`
@@ -365,7 +365,7 @@ const commands = {
         description: 'Download resume',
         execute: () => {
             window.open('./resume.pdf', '_blank');
-            return `<div class="output"><p class="success">Opening resume in a new tab... (place your PDF in this folder as resume.pdf)</p></div>`;
+            return `<div class="output"><p class="success">Opening resume in a new tab... </p></div>`;
         }
     },
 
