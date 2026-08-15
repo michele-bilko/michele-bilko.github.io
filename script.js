@@ -295,28 +295,56 @@ const commands = {
     <p class="section-title">Projects</p>
     <div class="entry">
         <div class="entry-header">
-            <div class="entry-dots"><div class="entry-dot red"></div><div class="entry-dot yellow"></div><div class="entry-dot green"></div></div>
-            <div class="entry-title">Central Rock Gym — Route Tracking System</div>
+            <div class="entry-dots">
+                <div class="entry-dot red"></div>
+                <div class="entry-dot yellow"></div>
+                <div class="entry-dot green"></div>
+            </div>
+            <div class="entry-title">Central Rock Gym Route Tracking System</div>
         </div>
         <div class="entry-content">
-            <div class="entry-meta">React · TypeScript · Django REST · PostgreSQL · D3.js · Aug 2025 – Present</div>
+            <div class="entry-meta">Django · React · PostgreSQL | Jan 2024 – Present | <a href="https://github.com/michele-bilko/central-rock-tracker" target="_blank">GitHub</a></div>
             <ul>
-                <li>Full-stack web app for a Boston climbing gym: a responsive React/TypeScript frontend over a Django REST backend.</li>
-                <li>Climbers log completed routes and track progress; routesetters manage live route data and view completion statistics on a D3.js analytics dashboard.</li>
+                <li>Full-stack climbing route tracking system with React frontend and Django REST backend</li>
+                <li>Integrated with gym's SQL database via custom ORM queries and triggers</li>
+                <li>Dual interface: climber portal + admin dashboard with D3.js analytics</li>
+                <li>OAuth 2.0 + JWT authentication with role-based access control</li>
             </ul>
-            <div class="tags"><span class="tag">full-stack</span><span class="tag">REST</span><span class="tag">data viz</span></div>
         </div>
     </div>
     <div class="entry">
         <div class="entry-header">
-            <div class="entry-dots"><div class="entry-dot red"></div><div class="entry-dot yellow"></div><div class="entry-dot green"></div></div>
-            <div class="entry-title">Tattoo Booking &amp; Artist Management Platform <span class="warning">[in development]</span></div>
+            <div class="entry-dots">
+                <div class="entry-dot red"></div>
+                <div class="entry-dot yellow"></div>
+                <div class="entry-dot green"></div>
+            </div>
+            <div class="entry-title">Columbia MCAH Finding Aid Tool</div>
         </div>
         <div class="entry-content">
-            <div class="entry-meta">In progress</div>
+            <div class="entry-meta">Java · Python · pandas</div>
             <ul>
-                <li>A booking platform for tattoo artists who currently manage appointments through Instagram DMs.</li>
-                <li>Lets artists link a Google Calendar, open and close availability, and separate booking requests from everything else — replacing manual DM triage with structured scheduling.</li>
+                <li>Automated data processing pipeline transforming 20k+ lines of metadata</li>
+                <li>Dynamic programming optimization (recursion + memoization)</li>
+                <li>Scalable categorization system with advanced error handling</li>
+            </ul>
+        </div>
+    </div>
+    <div class="entry">
+        <div class="entry-header">
+            <div class="entry-dots">
+                <div class="entry-dot red"></div>
+                <div class="entry-dot yellow"></div>
+                <div class="entry-dot green"></div>
+            </div>
+            <div class="entry-title">Theater Inventory Management System</div>
+        </div>
+        <div class="entry-content">
+            <div class="entry-meta">Node.js · Google Sheets API · OAuth | 2022 – 2023 | <a href="https://github.com/michele-bilko/theater-organizer" target="_blank">GitHub</a></div>
+            <ul>
+                <li>Collaborative inventory tracking with Google Sheets as backend</li>
+                <li>OAuth 2.0 authentication and test-driven development</li>
+                <li>Agile methodology with comprehensive unit test coverage</li>
             </ul>
         </div>
     </div>
