@@ -1,6 +1,4 @@
-/* ============================================================
-   THEME TOKENS — Tufts-inspired navy / blue / white palette
-   ============================================================ */
+
 :root {
     /* Dark mode (default) */
     --bg: #0a1626;
@@ -23,7 +21,7 @@
 }
 
 body.light-mode {
-    /* Light mode — white with deep Tufts blues */
+    /* Light mode  */
     --bg: #f3f7fc;
     --bg-panel: #ffffff;
     --bg-entry: #f7fafe;

@@ -73,7 +73,7 @@ function executeCommand(input) {
     }
 
     requestAnimationFrame(() => {
-        const contentCommands = ['about', 'education', 'research', 'viz', 'experience', 'projects', 'skills', 'contact'];
+        const contentCommands = ['about', 'education', 'coursework', 'research', 'viz', 'experience', 'projects', 'skills', 'contact'];
         if (contentCommands.includes(cmd)) {
             const commandLines = terminalOutput.querySelectorAll('.command-line');
             const lastCommandLine = commandLines[commandLines.length - 1];
@@ -95,6 +95,7 @@ const commands = {
     <p><span class="cmd-highlight">help</span> - Display this help message</p>
     <p><span class="cmd-highlight">about</span> - Learn about me</p>
     <p><span class="cmd-highlight">education</span> - View my education</p>
+    <p><span class="cmd-highlight">coursework</span> - View my full list of courses taken</p>
     <p><span class="cmd-highlight">research</span> - View my research experience</p>
     <p><span class="cmd-highlight">viz</span> - Interactive research visualization</p>
     <p><span class="cmd-highlight">experience</span> - View my work experience</p>
@@ -195,7 +196,7 @@ const commands = {
                 <li>Built a deep-learning pipeline that reconstructs the wedge-shaped data gaps in Landsat 7 ETM+ imagery — roughly <span class="info">22% of every scene</span> — caused by the 2003 Scan Line Corrector (SLC) hardware failure, a defect that has degraded the satellite's imagery for over two decades.</li>
                 <li>Extended <span class="info">LaMa</span> (Large Mask Inpainting), a Fourier-convolution architecture suited to large missing regions, with <span class="info">multi-temporal reference guidance</span> — conditioning each reconstruction on other timestamps of the same location.</li>
                 <li>Added <span class="info">CBAM</span> (Convolutional Block Attention Module) channel-and-spatial attention so the model preserves real terrain features — coastlines, field boundaries, river geometry — instead of hallucinating plausible-but-wrong texture across timestamps.</li>
-                <li>Implemented and trained in PyTorch. Paper presented at end of semester research symposium.</li>
+                <li>Implemented and trained in PyTorch. Paper presented at end of semester research symposium — <a href="./landsat-slc-inpainting-paper.pdf" target="_blank" rel="noopener">read the paper</a>.</li>
             </ul>
             <div class="tags"><span class="tag">PyTorch</span><span class="tag">LaMa</span><span class="tag">CBAM attention</span><span class="tag">remote sensing</span><span class="tag">image inpainting</span></div>
         </div>
@@ -208,7 +209,7 @@ const commands = {
         <div class="entry-content">
             <div class="entry-meta">Selected research writing</div>
             <ul>
-                <li>Authored the Wikipedia article on Fine-Grained Complexity, synthesizing core results for a broad technical audience.</li>
+                <li>Authored the <a href="https://en.wikipedia.org/wiki/Fine_grained_complexity" target="_blank" rel="noopener">Wikipedia article on Fine-Grained Complexity</a>, synthesizing core results for a broad technical audience.</li>
                 <li>Wrote a graduate-level survey paper on fine-grained complexity (CS 530).</li>
             </ul>
         </div>
@@ -363,6 +364,47 @@ const commands = {
 </div>`
     },
 
+    coursework: {
+        description: 'View full list of courses taken',
+        execute: () => `
+<div class="output">
+    <p class="section-title">Coursework</p>
+    <div class="entry">
+        <div class="entry-header">
+            <div class="entry-dots"><div class="entry-dot red"></div><div class="entry-dot yellow"></div><div class="entry-dot green"></div></div>
+            <div class="entry-title">Boston University</div>
+        </div>
+        <div class="entry-content">
+            <div class="entry-meta">B.A. Computer Science, Minor in Philosophy — 2024–2026</div>
+            <ul>
+                <li>CS 530 — Fine-Grained Complexity (approximation algorithms, randomized algorithms, online algorithms)</li>
+                <li>CS 332 — Theory of Computation (multi-head Turing machines, pointer machines, Rice's theorem, Nim games)</li>
+                <li>CS 585 — Image and Video Computing (Canny edge detection, bag-of-words, Hough transforms, mean-shift segmentation)</li>
+                <li>CS 460 — Database Systems (SQL, relational algebra, MongoDB, XQuery, concurrency control, logging &amp; recovery)</li>
+                <li>CS 412 — Software Engineering / Full-Stack Development</li>
+                <li>Probability in Computing</li>
+                <li>Geometric Algorithms</li>
+            </ul>
+        </div>
+    </div>
+    <div class="entry">
+        <div class="entry-header">
+            <div class="entry-dots"><div class="entry-dot red"></div><div class="entry-dot yellow"></div><div class="entry-dot green"></div></div>
+            <div class="entry-title">University of California, Santa Cruz</div>
+        </div>
+        <div class="entry-content">
+            <div class="entry-meta">B.S. coursework in Computer Science &amp; Game Development (transferred) — 2023–2024</div>
+            <ul>
+                <li>Machine Learning</li>
+                <li>Data Structures &amp; Algorithms</li>
+                <li>Computer Systems &amp; C Programming</li>
+                <li>Applied Discrete Mathematics</li>
+            </ul>
+        </div>
+    </div>
+</div>`
+    },
+
     skills: {
         description: 'View technical skills',
         execute: () => `
@@ -404,6 +446,7 @@ const commands = {
     <div class="file-list">
         <div class="file-item" onclick="executeCommandFromClick('about')">about</div>
         <div class="file-item" onclick="executeCommandFromClick('education')">education</div>
+        <div class="file-item" onclick="executeCommandFromClick('coursework')">coursework</div>
         <div class="file-item" onclick="executeCommandFromClick('research')">research</div>
         <div class="file-item" onclick="executeCommandFromClick('viz')">viz</div>
         <div class="file-item" onclick="executeCommandFromClick('experience')">experience</div>
