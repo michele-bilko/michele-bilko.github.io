@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michele Bilko's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>michele-bilko-portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="terminal-container">
@@ -14,7 +14,7 @@
                 <span class="btn-minimize"></span>
                 <span class="btn-maximize"></span>
             </div>
-            <div class="terminal-title">michele@portfolio:~</div>
+            <div class="terminal-title">michele@portfolio ~ %</div>
             <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
                 <div class="toggle-switch">
                     <div class="toggle-slider"></div>
@@ -28,15 +28,19 @@
                     <button class="folder-toggle" onclick="toggleSidebar()" aria-label="Toggle menu">☰</button>
                 </div>
                 <div class="file-list">
-                    <div class="file-item" onclick="executeCommandFromClick('about')">about</div>
-                    <div class="file-item" onclick="executeCommandFromClick('education')">education</div>
-                    <div class="file-item" onclick="executeCommandFromClick('coursework')">coursework</div>
-                    <div class="file-item" onclick="executeCommandFromClick('research')">research</div>
-                    <div class="file-item" onclick="executeCommandFromClick('viz')">viz</div>
-                    <div class="file-item" onclick="executeCommandFromClick('experience')">experience</div>
-                    <div class="file-item" onclick="executeCommandFromClick('projects')">projects</div>
-                    <div class="file-item" onclick="executeCommandFromClick('skills')">skills</div>
-                    <div class="file-item" onclick="executeCommandFromClick('contact')">contact</div>
+                    <div class="file-item" data-path="~/about" onclick="executeCommandFromClick('cd ~/about')">about</div>
+                    <div class="file-item" data-path="~/education" onclick="executeCommandFromClick('cd ~/education')">education</div>
+                    <div class="file-sub" data-parent="education">
+                        <div class="file-item" data-path="~/education/coursework" onclick="executeCommandFromClick('cd ~/education/coursework')">coursework</div>
+                    </div>
+                    <div class="file-item" data-path="~/research" onclick="executeCommandFromClick('cd ~/research')">research</div>
+                    <div class="file-sub" data-parent="research">
+                        <div class="file-item" data-path="~/research/viz" onclick="executeCommandFromClick('cd ~/research/viz')">viz</div>
+                    </div>
+                    <div class="file-item" data-path="~/experience" onclick="executeCommandFromClick('cd ~/experience')">experience</div>
+                    <div class="file-item" data-path="~/projects" onclick="executeCommandFromClick('cd ~/projects')">projects</div>
+                    <div class="file-item" data-path="~/skills" onclick="executeCommandFromClick('cd ~/skills')">skills</div>
+                    <div class="file-item" data-path="~/contact" onclick="executeCommandFromClick('cd ~/contact')">contact</div>
                     <div class="file-item" onclick="executeCommandFromClick('resume')">resume</div>
                 </div>
             </div>
@@ -52,38 +56,29 @@
                     </div>
 
                     <div class="output">
-                        <p>CS @ Boston University --> M.S. CS @ Tufts (Fall 2026). Algorithms, computer vision, and full-stack systems.</p>
-                        <p>Click a folder on the left or type a command to explore.</p>
+                        <p>CS @ Boston University --> M.S. CS @ Tufts</p>
+                        <p>click a folder on the left or check some commands</p>
                     </div>
 
                     <div class="output">
-                        <p class="section-title">Available Commands:</p>
-                        <p><span class="cmd-highlight">help</span> - Display this help message</p>
-                        <p><span class="cmd-highlight">about</span> - Learn about me</p>
-                        <p><span class="cmd-highlight">education</span> - View my education</p>
-                        <p><span class="cmd-highlight">coursework</span> - View my full list of courses taken</p>
-                        <p><span class="cmd-highlight">research</span> - View my research experience</p>
-                        <p><span class="cmd-highlight">viz</span> - Interactive research visualization</p>
-                        <p><span class="cmd-highlight">experience</span> - View my work experience</p>
-                        <p><span class="cmd-highlight">projects</span> - View my projects</p>
-                        <p><span class="cmd-highlight">skills</span> - View my technical skills</p>
-                        <p><span class="cmd-highlight">contact</span> - Get my contact information</p>
-                        <p><span class="cmd-highlight">resume</span> - Download my resume</p>
-                        <p><span class="cmd-highlight">clear</span> - Clear the terminal</p>
+                        <p class="section-title">available commands:</p>
+                        <p><span class="cmd-highlight">help</span> -  this help message</p>
+                        <p><span class="cmd-highlight">cd &lt;folder&gt;</span> - open a folder from the left, or <span class="cmd-highlight">ls</span> to see the full list</p>
+                        <p><span class="cmd-highlight">clear</span> - clear the terminal</p>
                     </div>
                 </div>
 
                 <div class="input-line" id="current-line">
-                    <span class="prompt">michele@portfolio</span>:<span class="path">~</span>$ <input type="text" id="terminal-input" autofocus autocomplete="off" spellcheck="false">
+                    <span class="prompt-wrap"><span class="prompt">michele@portfolio</span> <span class="path">~</span> %</span> <input type="text" id="terminal-input" autofocus autocomplete="off" spellcheck="false">
                 </div>
             </div>
         </div>
     </div>
 
     <div class="credit">
-        Built from scratch with HTML/CSS/JS · terminal concept inspired by <a href="https://github.com/ntenebruso/terminal-portfolio" target="_blank" rel="noopener">ntenebruso</a>
+        built from scratch with HTML/CSS/JS · terminal concept inspired by <a href="https://github.com/ntenebruso/terminal-portfolio" target="_blank" rel="noopener">ntenebruso</a>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
