@@ -9,6 +9,7 @@
     --muted: #6f93b8;
     --accent: #3e8ede;      /* Tufts blue */
     --accent-soft: #7ec3ff; /* lighter sky */
+    --file-hover: #a8d7ff;
     --prompt: #4fb0ff;
     --command: #cfe5fb;
     --highlight: #5ad1ff;
@@ -30,6 +31,7 @@ body.light-mode {
     --muted: #5f7c99;
     --accent: #2c6cb0;
     --accent-soft: #2c6cb0;
+    --file-hover: #4a8fd4;
     --prompt: #1f6bb8;
     --command: #134a82;
     --highlight: #0e7fb0;
@@ -183,7 +185,7 @@ body.light-mode .toggle-slider {
 .file-item {
     color: var(--accent-soft);
     cursor: url('../img/cursor-hover.png') 8 8, pointer;
-    transition: color 0.2s ease, transform 0.2s ease;
+    transition: color 0.2s ease;
 }
 
 .file-item::before { content: "/"; }
@@ -191,8 +193,7 @@ body.light-mode .toggle-slider {
 .file-item.opened::after { content: "/"; }
 
 .file-item:hover {
-    color: var(--highlight);
-    transform: translateX(3px);
+    color: var(--file-hover);
 }
 
 /* ---------- Output area ---------- */
